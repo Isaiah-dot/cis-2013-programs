@@ -104,7 +104,7 @@ var calcTriArea= function()
 };
 function triArea (floatTriSide1_par,floatTriSide2_par,floatTriSide3_par)
 {
-    var floatS = (floatTriSide1_par, floatTriSide2_par, floatTriSide3_par) / 2;
+    var floatS = (floatTriSide1_par + floatTriSide2_par + floatTriSide3_par) / 2;
     var floatTriangleArea= Math.sqrt((floatS * (floatS - floatTriSide1_par) * (floatS - floatTriSide2_par) * (floatS - floatTriSide3_par)));
     return floatTriangleArea.toFixed(2);
 }
