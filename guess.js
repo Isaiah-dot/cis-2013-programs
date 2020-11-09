@@ -4,6 +4,7 @@
  * (such as choosing a number outside the high or low boundary of the range). 
  */
 
+// Variables
 var intMax, intMin, intRandom, intGuess, intCount;
 
 /* the following section prompts the user to enter the low number of their guessing range
@@ -11,6 +12,7 @@ var intMax, intMin, intRandom, intGuess, intCount;
  * number is at least 0.
 */
 
+// Checks  if first number is less than 0 and is a number
 intMin = parseInt(prompt("Choose the lower number in the range. It must be at least zero."));
 while(intMin < 0 || isNaN(intMin))
 {
@@ -26,6 +28,7 @@ while(intMin < 0 || isNaN(intMin))
  * number is at least 2 more than the minimum (so that there is some guessing involved).
 */
 
+// Checks if the second number is higher than or = to 2 and is a number
 intMax = parseInt(prompt("Choose the higher number in the range. It must be at least 2 more than zero"));
 while(intMax <= 2 || isNaN(intMax) )
       {
@@ -44,10 +47,13 @@ while(intMax <= 2 || isNaN(intMax) )
  * the portion of (intMax-intMin +1) provides the range of random values
  * the addition of + intMin provides the floor for the random number 
  */
+
+//Sets the random number generator 
 intRandom = parseInt (Math.floor(Math.random()*(intMax-intMin+1))+intMin);
 
 
 // set the loop counter
+//counter for the mount of guess
 intCount = 1;
 
 
@@ -56,6 +62,7 @@ intCount = 1;
  * number is between the allowed max and min number choices.
 */
 
+//Checks for the guess and make sures it is a number
 intGuess = parseInt(prompt("Enter your Guess"));
 while(intGuess > intMax || intGuess < intMin)
 {
@@ -72,6 +79,7 @@ while(intGuess > intMax || intGuess < intMin)
  * the user chooses the correct number. Each time through the loop updates the loop counter.
  */
 
+// While statment to check if the guess is under or higher than the random number chose 
  while ( intGuess != intRandom)
  {
     if ( intGuess < intRandom )
@@ -96,5 +104,7 @@ while(intGuess > intMax || intGuess < intMin)
  
 
 // provides final output upon successful guessing
+
+// The ending message after getting the number guess right
 alert("Congratulations!!! You guessed the correct number (" + intRandom +")\n" +
 		" and it only took you " + intCount + " attempts!");
