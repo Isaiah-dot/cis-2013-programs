@@ -23,29 +23,29 @@ var generate = function ()
 	var k;    //k is calculated by adding i+j and represents the next Fibonacci number
 	var stringOutput = "0 1 ";//initialize the Fibonacci series output to include the first two numbers
 
-    intCount = 2;
+    intCount = 2; 
 	// write whatever kind of loop you want, given the above info, to generate the appropriate
 	// number of fibonacci numbers and then post it to the html DOM
     
     
     while (intCount <= intNumber)
     {
-        k = i + j;
-        i=j;
-        j=k;
-        stringOutput = stringOutput + K;
-        intCount++;
+        k = i + j;  //to set the next fib number
+        i=j; // sets i to j
+        j=k; // sets j to k
+        stringOutput = stringOutput + K; // adds k to the string output
+        intCount++; // increases the count so the loop can continue or exit
     }
 
 };
 
-// Push solution back to Output through DOM
+// Pushes solution back to Output through DOM to the user
 
 alert("Your solution is; " + generate);
 
 window.onload = function () 
 {
-    $("total_fib").value = "";
-    $("output").value = "";
+    $("total_fib").value = ""; // gets the value that is entered
+    $("output").value = ""; // gets the output 
     $("generate").onclick = generate; //runs the generate function when clicked
 };  
