@@ -41,7 +41,7 @@ var generate = function ()
 
 // Pushes solution back to Output through DOM to the user
 
-alert("Your solution is; " + generate);
+alert("Your solution is; " + stringOutput);
 
 window.onload = function () 
 {
