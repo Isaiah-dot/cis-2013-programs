@@ -12,7 +12,7 @@ var generate = function ()
 	var intNumber = parseInt($("total_fib").value);  //gets user input from the DOM
 	
 	//validates user's input (intCount is a number and intCount is not less than 2 or intCount not greater than 100)
-    while(intNumber > 2 || isNaN(intNumber) || intNumber <= 100)
+    while(intNumber > 2 && isNaN(intNumber) || intNumber <= 100)
       {
         
         intNumber = parseInt(prompt("Invalid number!! Try again."));
