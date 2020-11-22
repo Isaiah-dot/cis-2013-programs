@@ -12,10 +12,9 @@ var generate = function ()
 	var intNumber = parseInt($("total_fib").value);  //gets user input from the DOM
 	
 	//validates user's input (intCount is a number and intCount is not less than 2 or intCount not greater than 100)
-    while(intNumber > 2 && isNaN(intNumber) || intNumber <= 100)
+    while(intNumber > 2 || isNaN(intNumber) || intNumber <= 100)
       {
-        
-        intNumber = parseInt(prompt("Invalid number!! Try again."));
+        alert("Invalid number!! Try again."));
       }
 	
 	var i=0;  // sets the first number in the Fibonacci series to 0
@@ -33,15 +32,11 @@ var generate = function ()
         k = i + j;  //to set the next fib number
         i=j; // sets i to j
         j=k; // sets j to k
-        stringOutput = stringOutput + K; // adds k to the string output
+        stringOutput = stringOutput + k; // adds k to the string output
         intCount++; // increases the count so the loop can continue or exit
     }
-
+	$("output").value = stringOutput;
 };
-
-// Pushes solution back to Output through DOM to the user
-
-alert("Your solution is; " + stringOutput);
 
 window.onload = function () 
 {
