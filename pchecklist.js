@@ -17,19 +17,19 @@ var passwordCheckOld = function () // function to get the password from user and
   
   if (stringPassword.length < 8) // checks to make sure the password entered is longer than 8 characters
   {
-         $("output").value = "Your password is to short";
+         $("output").value = "Your password is to short"; // outputs when password is short
   }
   else
   {
-   for( j = 0; j < arrayBadPasswords.length; j++)
+   for( j = 0; j < arrayBadPasswords.length; j++) // checks each letter to make sure it doesn't match the bad passwords
    {
-      if ( stringPassword == arrayBadPasswords[j])
+      if ( stringPassword == arrayBadPasswords[j]) // makes sure it doesn't = the bad passwords
       {
-         $("output").value = "You have entered a bad password";
+         $("output").value = "You have entered a bad password"; // outputs when you entered a bad password
       }
       else
       {
-          $("output").value = stringPassword;
+          $("output").value = stringPassword; // prints out your password you created
       }
    }
   }
